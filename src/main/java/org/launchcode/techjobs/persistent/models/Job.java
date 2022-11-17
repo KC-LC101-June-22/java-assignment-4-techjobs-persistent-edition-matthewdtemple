@@ -9,8 +9,8 @@ public class Job extends AbstractEntity{
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "employer_id")
     private Employer employer;
+
     private String skills;
 
     public Job() {

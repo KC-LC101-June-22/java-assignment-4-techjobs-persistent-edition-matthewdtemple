@@ -22,6 +22,10 @@ public class Employer extends AbstractEntity {
 
     public Employer () {};
 
+    public List<Job> getJob() {
+        return job;
+    }
+
     public String getLocation() {
         return location;
     }
