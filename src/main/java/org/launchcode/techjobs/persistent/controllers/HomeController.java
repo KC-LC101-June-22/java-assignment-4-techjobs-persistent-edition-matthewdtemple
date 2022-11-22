@@ -78,10 +78,13 @@ public class HomeController {
     public String displayViewJob(Model model, @PathVariable int jobId) {
 
         Optional<Job> job = jobRepository.findById(jobId);
-        Job jobObj = job.get();
-        model.addAttribute("job", jobObj);
+        if (job.isPresent()){
+            Job jobObj = job.get();
+            model.addAttribute("job", jobObj);
 
-        return "view";
+            return "view";
+        }
+        return "index";
     }
 
 

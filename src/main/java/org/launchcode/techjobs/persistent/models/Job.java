@@ -7,8 +7,6 @@ import java.util.List;
 @Entity
 public class Job extends AbstractEntity{
 
-
-
     @ManyToOne
     @Valid
     private Employer employer;
@@ -16,8 +14,7 @@ public class Job extends AbstractEntity{
     @ManyToMany
     private List<Skill> skills;
 
-    public Job() {
-    }
+    public Job() {}
 
     public Job(Employer anEmployer, List<Skill> someSkills) {
         super();
